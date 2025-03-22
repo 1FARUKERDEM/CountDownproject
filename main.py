@@ -1,5 +1,5 @@
 import time
-from tkinter import *
+from tkinter import *            #library used
 from tkinter import messagebox
 
 
@@ -16,10 +16,14 @@ hour=StringVar()
 minute=StringVar()
 second=StringVar()
 
+                               # variables assigned
 
 hour.set("00")
 minute.set("00")
 second.set("00")
+
+
+                       #Color, size and position of the text in the application have been adjusted
 
 hourEntry= Entry(root, width=5 , font=("Arial",18,"bold"),
                   textvariable=hour,justify="center", bd=5,fg="limegreen",bg="yellow")
@@ -37,6 +41,8 @@ seckondEntry.place (x=190,y=20)
 
 running=False
 
+
+                                     # Countdown function created
 
 def submit():
     global running
@@ -76,9 +82,7 @@ def stop_timer():
     global running
     running = False
 
-
-
-
+                          # added start and stop buttons
 
 
 btn =Button(root, text='Start Countdown',font=("Arial",14,"bold"),justify="center",fg="limegreen",
